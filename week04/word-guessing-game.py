@@ -31,6 +31,8 @@ while play_again.upper() == 'YES':
             for letter, char in zip(user_guess, secret_word):
                 if letter == char:
                     print(char.upper(), end='')
+                elif secret_word.__contains__(letter):
+                    print(letter.lower(), end='')
                 else:
                     print('_ ', end='')
             guess_attempts += 1
